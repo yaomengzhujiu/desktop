@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/bg.jpg');
+    background-size: 100%;
+}
+
+
+.mixbg(@url, @size:100%,@pos:center){
+    background-image: url(@url);
+    background-repeat: no-repeat;
+    background-size: @size;
+    background-position: @pos;
+    
+}
+
+.warp {
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 4px;
+
+    .item {
+        position: absolute;
+        box-sizing: border-box;
+        list-style: none;
+        user-select: none;
+        text-align: center;
+        padding: 1px;
+
+        .icon-warp {
+            box-sizing: border-box;
+            margin: 0 auto;
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            padding: 2px;
+            border: 1px solid transparent;
+
+            .mixcolor(@opc) {
+                background: rgba(200, 200, 200, @opc);
+                border-color: rgba(255, 255, 255, 0.3);
+            }
+
+            &.over {
+                .mixcolor(0.2);
+            }
+
+            &.select {
+                .mixcolor(0.5);
+                border-style: dashed;
+            }
+
+            .icon {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+
+            .name {
+                line-height: 12px;
+                font-size: 12px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: center;
+                color: #ffffff;
+                text-shadow: 2px 2px 2px #000000;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+        }
+    }
+}
+
+.popup {
+    position: fixed;
+    background: #ffffff;
+    z-index: 10000;
+    border: 2px solid #eee;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+
+    .popup-bar {
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        line-height: 24px;
+        font-size: 14px;
+        padding: 0 10px 0 10px;
+        border-bottom: 2px solid #eee;
+        user-select: none;
+
+        i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background-size: 12px;
+            user-select: none;
+            .mixbg('../images/icon-del.png',12px);
+
+            &:hover {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 24px;
+                height: 24px;
+                background-repeat: no-repeat;
+                background-size: 12px;
+                background-position: center;
+                user-select: none;
+                background: #e30c28;
+                .mixbg('../images/icon-del-hover.png',12px);
+
+            }
+        }
+    }
+}

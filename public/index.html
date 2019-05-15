@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desktop</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+
+
+    <ul class="warp" draggable="false">
+
+    </ul>
+    <script>
+        // 等分生成组件 18份
+        // (function () {
+
+        //     const max = 18; // 一行最大图标数
+        //     const data = 30; // 数据总数
+        //     const {
+        //         floor
+        //     } = Math;
+        //     const screenW = window.screen.width; // 屏幕宽度
+        //     const space = screenW / max; // 图标宽度
+        //     let warp = document.getElementsByClassName('warp')[0]; // 图标所处父节点
+        //     document.body.style.width = screenW + 'px';
+        //     let coordinate = new Map; // 用户图标的坐标
+        //     let request = window.indexedDB.open('user');
+        //     let lis = document.createDocumentFragment(); // 虚拟节点
+
+
+        //     // if (!db.layout) {
+
+        //     for (let i = 0; i < data; i++) {
+
+        //         let left = i % max * space;
+        //         let top = floor(i / max) * 90;
+        //         createIcon(left, top, space, i)
+        //     }
+
+        //     // }
+        //     // else {
+        //     //     layoutCache.forEach(res => {
+        //     //         createIcon(res.left, res.top, space)
+        //     //     })
+        //     // }
+        //     function createIcon(left, top, space, cont) {
+        //         let li = document.createElement('li');
+        //         let i = document.createElement('i');
+        //         let p = document.createElement('p');
+        //         let div = document.createElement('div');
+
+        //         i.className = 'icon'
+        //         i.style.backgroundImage = `url('./images/bg.jpg')`
+
+        //         p.className = 'name'
+        //         p.innerHTML = `${cont%2==1?'哈哈哈哈哈哈':'sajksaj'}`
+
+        //         div.appendChild(i)
+        //         div.appendChild(p)
+        //         div.className = 'icon-warp'
+        //         div.onmouseenter = function(e){
+        //             this.classList.add('over')
+        //         }
+        //         div.onmouseleave = function(e){
+        //             this.classList.remove('over')
+        //         }
+        //         div.ondblclick = function (e){
+        //             console.log(e)
+        //         }
+
+
+        //         li.className = 'item';
+        //         li.style.cssText = `width:${space}px;height:${space}px;left:${left}px;top:${top}px`;
+        //         li.draggable = true
+        //         li.appendChild(div)
+        //         li.ondragend = function (e) {
+        //             const mouseX = e.clientX;
+        //             const mouseY = e.clientY;
+        //             const left = floor(mouseX / space) * space;
+        //             const top = floor(mouseY / 90) * 90;
+
+        //             coordinate.forEach((v, k) => {
+        //                 if (floor(v.left) === floor(left) && floor(v.top) === floor(top) && k !== this) {
+        //                     k.style.left = this.style.left
+        //                     k.style.top = this.style.top
+        //                     coordinate.set(k, {
+        //                         left: parseFloat(this.style.left),
+        //                         top: parseFloat(this.style.top)
+        //                     })
+        //                 }
+        //             })
+        //             this.style.left = left + 'px';
+        //             this.style.top = top + 'px';
+        //             coordinate.set(this, {
+        //                 left,
+        //                 top
+        //             })
+
+        //         }
+
+
+        //         lis.appendChild(li)
+
+        //         coordinate.set(li, {
+        //             left,
+        //             top
+        //         }) // 储存坐标
+
+        //     }
+        //     warp.appendChild(lis)
+
+        // })()
+    </script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
